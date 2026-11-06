@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>Histórico de visitantes de estaciones de esquí españolas - ATUDEM</title>
+<style>
+:root{font-family:system-ui,-apple-system,"Segoe UI",Arial,sans-serif;color-scheme:light dark;--fg:#253142;--bg:#fff;--line:#dce2e9;--stripe:#f4f7fa;--head:#d0dae5;--accent:#345f8b}
+@media(prefers-color-scheme:dark){:root{--fg:#ecf1f7;--bg:#1b2129;--line:#46505c;--stripe:#262f39;--head:#3e5268;--accent:#9cc8ff}}
+:root[data-theme="light"]{color-scheme:light;--fg:#253142;--bg:#fff;--line:#dce2e9;--stripe:#f4f7fa;--head:#d0dae5;--accent:#345f8b}
+:root[data-theme="dark"]{color-scheme:dark;--fg:#ecf1f7;--bg:#1b2129;--line:#46505c;--stripe:#262f39;--head:#3e5268;--accent:#9cc8ff}
+*{box-sizing:border-box}body{margin:0;padding:12px;background:var(--bg);color:var(--fg);font-size:15px}
+h1{font-size:19px;line-height:1.3;margin:0 0 9px}p{margin:8px 0}.controls{display:flex;align-items:center;justify-content:space-between;gap:8px;flex-wrap:wrap;margin:10px 0}
+button{color:var(--fg);border:1px solid var(--line);border-radius:6px;background:var(--stripe);padding:8px 10px;font:inherit;cursor:pointer}button:hover,button:focus-visible{outline-color:var(--accent);background:var(--head)}button[aria-pressed="true"]{background:var(--head);font-weight:700}
+.tablewrap{width:100%;overflow-x:auto;border:1px solid var(--line);border-radius:7px}
+table{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums;min-width:290px}th{background:var(--head);padding:0;text-align:left}th button{width:100%;border:0;border-radius:0;text-align:left;background:transparent;font-weight:700;padding:12px}th:last-child button{text-align:right}td{padding:9px 12px;border-top:1px solid var(--line)}td:last-child{text-align:right;font-weight:600}tbody tr:nth-child(even){background:var(--stripe)}.foot{font-size:12px;line-height:1.55;opacity:.85;margin-top:10px}
+</style>
+</head>
+<body>
+<main>
+<h1>Visitantes de las estaciones de esquí españolas</h1>
+<div class="controls">
+<div><button id="byYear" type="button" aria-pressed="true">Temporada ↓</button> <button id="byCount" type="button" aria-pressed="false">Visitantes ↕</button></div>
+<button id="theme" type="button">Modo: automático</button>
+</div>
+<div class="tablewrap"><table><thead><tr><th scope="col">Temporada</th><th scope="col">Visitantes</th></tr></thead><tbody id="data">
+<tr data-year="2025" data-count="6049620"><td>2025-2026</td><td>6.049.620</td></tr>
+<tr data-year="2024" data-count="5155380"><td>2024-2025</td><td>5.155.380</td></tr>
+<tr data-year="2023" data-count="4716005"><td>2023-2024</td><td>4.716.005</td></tr>
+<tr data-year="2022" data-count="5500731"><td>2022-2023</td><td>5.500.731</td></tr>
+<tr data-year="2021" data-count="5902435"><td>2021-2022</td><td>5.902.435</td></tr>
+<tr data-year="2020" data-count="1518170"><td>2020-2021</td><td>1.518.170</td></tr>
+<tr data-year="2019" data-count="4810951"><td>2019-2020</td><td>4.810.951</td></tr>
+<tr data-year="2018" data-count="5477735"><td>2018-2019</td><td>5.477.735</td></tr>
+<tr data-year="2017" data-count="5847605"><td>2017-2018</td><td>5.847.605</td></tr>
+<tr data-year="2016" data-count="5448972"><td>2016-2017</td><td>5.448.972</td></tr>
+<tr data-year="2015" data-count="4796436"><td>2015-2016</td><td>4.796.436</td></tr>
+<tr data-year="2014" data-count="5107394"><td>2014-2015</td><td>5.107.394</td></tr>
+<tr data-year="2013" data-count="4883863"><td>2013-2014</td><td>4.883.863</td></tr>
+<tr data-year="2012" data-count="4905472"><td>2012-2013</td><td>4.905.472</td></tr>
+<tr data-year="2011" data-count="4505715"><td>2011-2012</td><td>4.505.715</td></tr>
+<tr data-year="2010" data-count="5527577"><td>2010-2011</td><td>5.527.577</td></tr>
+<tr data-year="2009" data-count="6104818"><td>2009-2010</td><td>6.104.818</td></tr>
+<tr data-year="2008" data-count="7411275"><td>2008-2009</td><td>7.411.275</td></tr>
+<tr data-year="2007" data-count="5831310"><td>2007-2008</td><td>5.831.310</td></tr>
+<tr data-year="2006" data-count="5246890"><td>2006-2007</td><td>5.246.890</td></tr>
+<tr data-year="2005" data-count="7165109"><td>2005-2006</td><td>7.165.109</td></tr>
+<tr data-year="2004" data-count="6213869"><td>2004-2005</td><td>6.213.869</td></tr>
+<tr data-year="2003" data-count="6253300"><td>2003-2004</td><td>6.253.300</td></tr>
+<tr data-year="2002" data-count="6133744"><td>2002-2003</td><td>6.133.744</td></tr>
+<tr data-year="2001" data-count="5486320"><td>2001-2002</td><td>5.486.320</td></tr>
+<tr data-year="2000" data-count="5233973"><td>2000-2001</td><td>5.233.973</td></tr>
+<tr data-year="1999" data-count="5200000"><td>1999-2000</td><td>5.200.000 *</td></tr>
+<tr data-year="1998" data-count="5612277"><td>1998-1999</td><td>5.612.277</td></tr>
+<tr data-year="1997" data-count=""><td>1997-1998</td><td>s/d</td></tr>
+<tr data-year="1996" data-count="4850000"><td>1996-1997</td><td>4.850.000 *</td></tr>
+<tr data-year="1995" data-count="5200000"><td>1995-1996</td><td>5.200.000 *</td></tr>
+</tbody></table></div>
+<p class="foot">Fuente: ATUDEM, cifras recopiladas de las temporadas indicadas. * Dato redondeado. s/d: sin dato disponible. Las cifras representan visitas y no personas únicas.</p>
+</main>
+<script>
+(function(){
+ const body=document.getElementById('data'), rows=Array.from(body.rows);
+ const byYear=document.getElementById('byYear'),byCount=document.getElementById('byCount');
+ let lastKey='year',dir=-1;
+ function sort(key){dir=lastKey===key?-dir:-1;lastKey=key;
+ rows.sort((a,b)=>{const av=a.dataset[key],bv=b.dataset[key];if(av==='')return bv===''?0:1;if(bv==='')return -1;return (Number(av)-Number(bv))*dir;});
+ body.replaceChildren(...rows);byYear.setAttribute('aria-pressed',String(key==='year'));byCount.setAttribute('aria-pressed',String(key==='count'));
+ byYear.textContent='Temporada '+(key==='year'?(dir===-1?'↓':'↑'):'↕');
+ byCount.textContent='Visitantes '+(key==='count'?(dir===-1?'↓':'↑'):'↕');
+ }
+ byYear.addEventListener('click',()=>sort('year'));byCount.addEventListener('click',()=>sort('count'));
+ const theme=document.getElementById('theme');const options=['auto','light','dark'];let state=0;
+ theme.addEventListener('click',()=>{state=(state+1)%3;const value=options[state];if(value==='auto')document.documentElement.removeAttribute('data-theme');else document.documentElement.dataset.theme=value;theme.textContent='Modo: '+({auto:'automático',light:'claro',dark:'oscuro'}[value]);});
+})();
+</script>
+</body></html>
